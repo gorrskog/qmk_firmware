@@ -112,15 +112,18 @@
             }
         }
     },
+
     "rgblight": {
-        "pin": "D3",
         "led_count": 68,
         "split": true,
         "split_count": [34, 34],
         "max_brightness": 128
     },
+    "ws2812": {
+        "pin": "D3"
+    },
     "rgb_matrix": {
-        "driver": "WS2812",
+        "driver": "ws2812",
         "layout": [
             {"flags": 2, "x":  51, "y": 13},                   // L RGB1
             {"flags": 2, "x":  22, "y": 18},                   // L RGB2

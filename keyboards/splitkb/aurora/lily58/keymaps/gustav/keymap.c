@@ -10,7 +10,7 @@
 
 // Tap Dance declarations
 
-void space(qk_tap_dance_state_t *state, void *user_data) {
+void space(tap_dance_state_t *state, void *user_data) {
     if (state->count == 1) {
         SEND_STRING(" ");
         reset_tap_dance(state);
@@ -32,7 +32,7 @@ enum {
 };
 
 // Tap Dance definitions
-qk_tap_dance_action_t tap_dance_actions[] = {
+tap_dance_action_t tap_dance_actions[] = {
     // Tap once for Escape, twice for Caps Lock
     [TD_ESC_CAPS] = ACTION_TAP_DANCE_DOUBLE(KC_ESC, KC_CAPS),
     [TD_C_COPY] = ACTION_TAP_DANCE_DOUBLE(KC_C, LCTL(KC_C)),
